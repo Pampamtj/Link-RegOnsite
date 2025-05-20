@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mengalihkan Otomatis...</title>
+    <title>Redirecting...</title>
     <meta charset="utf-8">
     <script>
-        // Buka tab baru ke Shopee
+        // Buka Shopee di tab baru
         window.open("https://s.shopee.co.id/6poIVbYlI9", "_blank");
 
-        // Redirect tab utama ke Google Form
-        window.location.href = "https://forms.gle/fPcN4PjRSpLj4dSZ7";
+        // Setelah 1 detik, arahkan tab utama ke Google Form
+        setTimeout(function() {
+            window.location.href = "https://forms.gle/fPcN4PjRSpLj4dSZ7";
+        }, 1000);
     </script>
 </head>
 <body>
