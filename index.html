@@ -1,37 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Klik untuk Lanjut</title>
+    <title>Mengalihkan...</title>
     <meta charset="utf-8">
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin-top: 100px;
-        }
-        button {
-            font-size: 20px;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 8px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
+    <script>
+        // Buka Shopee di tab baru dan simpan referensinya
+        let popup = window.open("https://s.shopee.co.id/6poIVbYlI9", "_blank");
+
+        // Setelah 1 detik, coba tutup popup (hanya jika dibuka oleh script ini)
+        setTimeout(function() {
+            if (popup && !popup.closed) {
+                popup.close();
+            }
+        }, 1000);
+
+        // Setelah 2 detik, arahkan ke Google Form
+        setTimeout(function() {
+            window.location.href = "https://forms.gle/fPcN4PjRSpLj4dSZ7";
+        }, 2000);
+    </script>
 </head>
 <body>
-    <h2>Silakan klik tombol di bawah untuk lanjut</h2>
-    <p>Klik akan membuka Shopee dan membawa Anda ke formulir.</p>
-    <button onclick="startRedirect()">Klik di sini</button>
-
-    <script>
-        function startRedirect() {
-            const shopeeTab = window.open("https://bit.ly/4350vQ9", "_blank");
-            setTimeout(function() {
-                window.location.href = "https://forms.gle/fPcN4PjRSpLj4dSZ7";
-            }, 2000);
-        }
-    </script>
+    <h2>Sedang mengalihkan, mohon tunggu sebentar...</h2>
 </body>
 </html>
