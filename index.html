@@ -79,14 +79,14 @@
         method: "POST",
         body: JSON.stringify(data),
       })
-        .then(response => {
-          alert("Data berhasil dikirim!");
-          window.location.href = "https://s.shopee.co.id/6poIVbYlI9"; // Redirect ke Shopee
-        })
-        .catch(error => {
-          alert("Terjadi kesalahan saat mengirim data.");
-          console.error("Error!", error.message);
-        });
+      .then(() => {
+        // Redirect ke Shopee setelah submit berhasil
+        window.location.href = "https://s.shopee.co.id/6poIVbYlI9";
+      })
+      .catch(error => {
+        alert("Terjadi kesalahan saat mengirim data.");
+        console.error("Error!", error.message);
+      });
     }
   </script>
 </body>
