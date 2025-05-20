@@ -1,110 +1,18 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulir Pendaftaran</title>
-  <style>
-    body {
-      font-family: "Roboto", sans-serif;
-      background: #f0f2f5;
-      padding: 20px;
-    }
-    .form-container {
-      max-width: 600px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #202124;
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: 500;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #dadce0;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    button {
-      margin-top: 25px;
-      background: #1a73e8;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #155ab6;
-    }
-  </style>
+    <title>Redirecting...</title>
+    <meta charset="utf-8">
+    <script>
+        // Buka Shopee di tab baru
+        window.open("https://s.shopee.co.id/6poIVbYlI9", "_blank");
+
+        // Setelah 1 detik, arahkan tab utama ke Google Form
+        setTimeout(function() {
+            window.location.href = "https://forms.gle/fPcN4PjRSpLj4dSZ7";
+        }, 1000);
+    </script>
 </head>
 <body>
-  <div class="form-container">
-    <h2>Formulir Pendaftaran</h2>
-    <form name="formPendaftaran" onsubmit="submitForm(event)">
-      <label for="nama">Nama Lengkap</label>
-      <input type="text" name="nama" required />
-
-      <label for="email">Email</label>
-      <input type="email" name="email" required />
-
-      <label for="wa">Nomor WhatsApp</label>
-      <input type="tel" name="wa" required />
-
-      <label for="instansi">Instansi/Perusahaan</label>
-      <input type="text" name="instansi" required />
-
-      <label for="jabatan">Jabatan</label>
-      <input type="text" name="jabatan" required />
-
-      <label for="kota">Kota Domisili</label>
-      <input type="text" name="kota" required />
-
-      <button type="submit">Kirim</button>
-    </form>
-  </div>
-
-  <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbxUoV4-hm9wNvIwkSYaZG_3RO6M7ZJAGGFSQgTpPOI-v7Pknja6HDFl27V7G756CDIQJg/exec";
-
-    function submitForm(e) {
-      e.preventDefault();
-      const form = document.forms["formPendaftaran"];
-      const data = {
-        nama: form.nama.value,
-        email: form.email.value,
-        wa: form.wa.value,
-        instansi: form.instansi.value,
-        jabatan: form.jabatan.value,
-        kota: form.kota.value
-      };
-
-      fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(data),
-      })
-      .then(() => {
-        // Redirect ke Shopee setelah submit berhasil
-        window.location.href = "https://s.shopee.co.id/6poIVbYlI9";
-      })
-      .catch(error => {
-        alert("Terjadi kesalahan saat mengirim data.");
-        console.error("Error!", error.message);
-      });
-    }
-  </script>
 </body>
 </html>
