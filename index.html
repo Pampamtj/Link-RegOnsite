@@ -11,7 +11,7 @@
       padding: 20px;
     }
     .form-container {
-      max-width: 500px;
+      max-width: 600px;
       margin: auto;
       background: white;
       padding: 30px;
@@ -27,7 +27,8 @@
       font-weight: 500;
     }
     input[type="text"],
-    input[type="email"] {
+    input[type="email"],
+    input[type="tel"] {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -60,6 +61,18 @@
       <label for="email">Email</label>
       <input type="email" name="email" required />
 
+      <label for="wa">Nomor WhatsApp</label>
+      <input type="tel" name="wa" required />
+
+      <label for="instansi">Instansi/Perusahaan</label>
+      <input type="text" name="instansi" required />
+
+      <label for="jabatan">Jabatan</label>
+      <input type="text" name="jabatan" required />
+
+      <label for="kota">Kota Domisili</label>
+      <input type="text" name="kota" required />
+
       <button type="submit">Kirim</button>
     </form>
   </div>
@@ -73,6 +86,10 @@
       const data = {
         nama: form.nama.value,
         email: form.email.value,
+        wa: form.wa.value,
+        instansi: form.instansi.value,
+        jabatan: form.jabatan.value,
+        kota: form.kota.value
       };
 
       fetch(scriptURL, {
